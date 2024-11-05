@@ -2,6 +2,17 @@
 #include <stdlib.h> 
 #include <time.h>   
 #include <unistd.h> 
+//Homework answers//
+//
+// #1) CLOCK_PROCESS_CPUTIME_ID has resolution of 1 nanosecond on Linux
+//
+// #5) Using gcc's optimize option gcc -O0 to disable optimization. This is the default setting.
+//
+// #6) Use sched_setaffinity(2), pthread_setaffinity_np(3), taskset(1) or sudo systemd-run -p AllowedCPUs=0 ./tlb.out on Linux, cpuset_setaffinity(2) or cpuset(1) on FreeBSD.
+//  Or use hwloc-bind package:0.pu:0 -- ./tlb.out.
+//
+// #7) Use calloc(3) to initialize array then measure time.
+////////////////////
 
 #define handle_error(msg)                                                      \
   do {                                                                         \
